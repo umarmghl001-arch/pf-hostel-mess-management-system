@@ -103,6 +103,8 @@ int main() {
         cout << "2. Display All Students\n";
         cout << "3. Update Student Meals\n";
         cout << "4. Delete Student Record\n";
+         cout << "5. Calculate Mess Bill\n";
+        
         cout << "6. Save & Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
@@ -113,6 +115,7 @@ int main() {
             case 2: displayStudents(); break;
             case 3: updateMeals(); break;
             case 4: deleteStudent(); break;
+            case 5: calculateBill(); break;
             case 6: saveStudents(); break;
             
             default: cout << "Invalid choice! Try again.\n";
