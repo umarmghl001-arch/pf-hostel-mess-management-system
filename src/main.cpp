@@ -39,6 +39,15 @@ int main() {
 
 void loadStudents(){
     cout<<"load students";
+    ifstream file("mess.txt");
+    if (!file)
+        return;
+
+    file >> totalStudents;
+    for (int i = 0; i < totalStudents; i++) {
+        file >> rollNo[i] >> name[i] >> meals[i];
+    }
+    file.close();
 }
 void saveStudents(){
     cout<<"save students";
