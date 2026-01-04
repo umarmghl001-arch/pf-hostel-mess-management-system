@@ -52,7 +52,7 @@ void loadStudents(){
 void saveStudents(){
     cout<<"save students";
 
-    ofstream file("hostel.txt");
+    ofstream file("mess.txt");
     file << totalStudents << endl;
 
     for (int i = 0; i < totalStudents; i++) {
