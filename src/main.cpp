@@ -10,6 +10,41 @@ int totalStudents = 0;
 void loadStudents();
 void saveStudents();
 
+void addStudent() {
+    if (totalStudents >= MAX) {
+        cout << "Student limit reached!\n";
+        return;
+    }
+
+    cout << "Enter Roll No: ";
+    cin >> rollNo[totalStudents];
+    cout << "Enter Name: ";
+    cin >> name[totalStudents];
+    cout << "Enter Meals Taken: ";
+    cin >> meals[totalStudents];
+
+    totalStudents++;
+    cout << "Student added successfully!\n";
+}
+
+void updateMeals() {
+    int r, found = 0;
+    cout << "Enter Roll No to update meals: ";
+    cin >> r;
+
+    for (int i = 0; i < totalStudents; i++) {
+        if (rollNo[i] == r) {
+            cout << "Enter new meal count: ";
+            cin >> meals[i];
+            cout << "Meals updated successfully!\n";
+            found = 1;
+            break;
+        }
+    }
+    if (!found)
+        cout << "Student not found!\n";
+}
+
 int main() {
     int choice;
     
@@ -25,7 +60,9 @@ int main() {
 
         switch (choice) {
             
+            case 1: addStudent();
             case 2: displayStudents(); break;
+            case 6: saveStudents();
             
             default: cout << "Invalid choice! Try again.\n";
         }
