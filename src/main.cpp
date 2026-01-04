@@ -51,6 +51,16 @@ void loadStudents(){
 }
 void saveStudents(){
     cout<<"save students";
+
+    ofstream file("hostel.txt");
+    file << totalStudents << endl;
+
+    for (int i = 0; i < totalStudents; i++) {
+        file << rollNo[i] << " "
+             << name[i] << " "
+             << meals[i] << endl;
+    }
+    file.close();
 }
 
 
