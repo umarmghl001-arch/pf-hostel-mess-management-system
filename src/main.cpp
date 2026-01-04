@@ -6,6 +6,7 @@ const int MAX = 100;
 int rollNo[MAX], meals[MAX];
 string name[MAX];
 int totalStudents = 0;
+const int mealRate = 150;
 
 void loadStudents();
 void saveStudents();
@@ -72,6 +73,24 @@ void deleteStudent() {
 
     totalStudents--;
     cout << "Student record deleted successfully!\n";
+}
+
+void calculateBill() {
+    if (totalStudents == 0) {
+        cout << "No records available!\n";
+        return;
+    }
+
+    int totalIncome = 0;
+    cout << "\n--- Mess Bill Details ---\n";
+    for (int i = 0; i < totalStudents; i++) {
+        int bill = meals[i] * mealRate;
+        totalIncome += bill;
+        cout << "Roll No: " << rollNo[i]
+             << " | Name: " << name[i]
+             << " | Bill: Rs " << bill << endl;
+    }
+    cout << "Total Mess Income: Rs " << totalIncome << endl;
 }
 
 int main() {
