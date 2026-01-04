@@ -19,7 +19,7 @@ int main() {
         cout << "1. Add Student\n";
         cout << "2. Display All Students\n";
         cout << "3. Update Student Meals\n";
-        cout << "6. Exit\n";
+        cout << "6. Save & Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
