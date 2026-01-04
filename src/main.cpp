@@ -7,6 +7,9 @@ int rollNo[MAX], meals[MAX];
 string name[MAX];
 int totalStudents = 0;
 
+void loadStudents();
+void saveStudents();
+
 int main() {
     int choice;
     
@@ -31,6 +34,14 @@ int main() {
     } while (choice != 6);
 
     return 0;
+}
+
+
+void loadStudents(){
+    cout<<"load students";
+}
+void saveStudents(){
+    cout<<"save students";
 }
 
 
