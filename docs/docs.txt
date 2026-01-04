@@ -105,6 +105,15 @@ Shows bill for each student and total mess income.
 Save & Exit
 Saves all data into a file and exits the program.
 
+👥 Group Members
+
+This project is developed by a group of three students:
+
+Student 1: ______________________
+
+Student 2: ______________________
+
+Student 3: ______________________
 
 🏫 University Information
 
